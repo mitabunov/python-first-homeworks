@@ -4,6 +4,18 @@
 
 def fibonacci(n, m):
     pass
+N = int(input(10))
+#
+# f1 = f2 = 1
+# print(f1, f2, end=' введи значение N "стотыщ мильонов"...')
+#
+# i = 2
+# while i < N:
+#     f1, f2 = f2, f1 + f2
+#     print(f2, end=' ')
+#     i += 1
+#
+# print()
 
 # Задача-2:
 # Напишите функцию, сортирующую принимаемый список по возрастанию.
@@ -15,6 +27,25 @@ def sort_to_max(origin_list):
     pass
 
 sort_to_max([2, 10, -12, 2.5, 20, -11, 4, 4, 0])
+
+from random import randint
+
+N = 10
+a = []
+
+for i in range(N):
+    a.append(randint(0,30))
+print(a)
+
+for i in range(N-1):
+    for j in range(N-i-1):
+        if a[j] > a[j+1]:
+            b = a[j]
+            a[j] = a[j+1]
+            a[j+1] = b
+
+print(a)
+
 
 # Задача-3:
 # Напишите собственную реализацию стандартной функции filter.
